@@ -71,3 +71,37 @@ for ( var i = 0 ; i < arrayStudenti.length; i++) {
   console.log(arrayStudenti[i].nome + ' ' + arrayStudenti[i]['cognome']);
 
 }
+
+
+
+/* Dare la possibilità all’utente,
+attraverso 3 prompt, di aggiungere
+un nuovo oggetto studente inserendo nell’ordine:
+nome, cognome e età */
+
+// 1. Mi creo un oggetto vuoto
+var nuovoStudente = {
+
+}
+
+// 2. Prompt uno: nome
+var nomeUtente = prompt('Inserisci un nome');
+// Vado ad aggiungere il valore dato dall'utente per la chiave nome
+nuovoStudente.nome = nomeUtente;
+
+// 3. Prompt due: cognome
+var cognomeUtente = prompt('Inserisci un cognome');
+// Vado ad aggiungere il valore dato dall'utente per la chiave cognome
+nuovoStudente.cognome = cognomeUtente;
+
+// 4. Prompt tre: eta
+var etaUtente = prompt('Inserisci eta');
+// Aggiungo il valore dato dall'utente per la chiave età
+nuovoStudente.eta = etaUtente
+
+// 5. Stampo il nuovo oggetto
+console.log(nuovoStudente);
+
+// 6. Aggiungo l'oggetto compilato dall'utente nel mio array di oggetti
+arrayStudenti.push(nuovoStudente);
+console.log(arrayStudenti);
