@@ -45,29 +45,25 @@ for ( var i = 0 ; i < studentsArray.length; i++) {
   console.log(studentsArray[i].name + ' ' + studentsArray[i]['lastname']);
 }
 //--------------------------------------------------------------------------
-// 1. Mi creo un oggetto vuoto
-var nuovoStudente = {
-
+// 1. Create empty object
+var newStudent = {
 }
-
-// 2. Prompt uno: nome
-var nomeUtente = prompt('Inserisci un nome');
-// Vado ad aggiungere il valore dato dall'utente per la chiave nome
-nuovoStudente.name = nomeUtente;
-
-// 3. Prompt due: cognome
-var cognomeUtente = prompt('Inserisci un cognome');
-// Vado ad aggiungere il valore dato dall'utente per la chiave cognome
-nuovoStudente.lastname = cognomeUtente;
-
-// 4. Prompt tre: eta
-var etaUtente = prompt('Inserisci eta');
-// Aggiungo il valore dato dall'utente per la chiave età
-nuovoStudente.age = etaUtente
-
-// 5. Stampo il nuovo oggetto
-console.log(nuovoStudente);
-
-// 6. Aggiungo l'oggetto compilato dall'utente nel mio array di oggetti
-studentsArray.push(nuovoStudente);
+var userName = prompt('Insert the name');
+while (!isNaN(userName)) {
+  userName = prompt('Insert the name');
+}
+// Add the value
+newStudent.name = userName;
+var userLastname = prompt('Insert the lastname');
+while (!isNaN(userLastname)) {
+  userLastname = prompt('Insert the lastname');
+}
+newStudent.lastname = userLastname;
+var userAge = prompt('Insert the age');
+while (isNaN(userAge) || userAge == '') {
+  userAge = prompt('Insert the age');
+}
+newStudent.age = userAge
+console.log(newStudent);
+studentsArray.push(newStudent);
 console.log(studentsArray);
