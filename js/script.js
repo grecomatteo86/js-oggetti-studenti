@@ -13,60 +13,38 @@ for ( var key in student ) {
   console.log(student[key]);
 }
 //-------------------------------------------------
-
-/* Creare un array di oggetti di studenti.
-Ciclare su tutti gli studenti
-e stampare per ognuno nome e cognome */
-
-// 1. Creo un array di oggetti di Studenti
-var arrayStudenti = [
-
+// 1. Create an array of objects
+var studentsArray = [
   {
-    nome : 'Andrea',
-    cognome : 'Vai',
-    eta : 33,
-    lavoro: 'idraulico'
+    name : 'Andrea',
+    lastname : 'Vai',
+    age : 33,
+    job: 'idraulico'
   },
-
   {
-    nome : 'Luca',
-    cognome : 'Bianchi',
-    eta : 18,
-    lavoro: 'studente'
+    name : 'Luca',
+    lastname : 'Bianchi',
+    age : 18,
+    job: 'studente'
   },
-
   {
-    nome : 'Mario',
-    cognome : 'Verdi',
-    eta : 21,
-    lavoro: 'sviluppatore'
+    name : 'Mario',
+    lastname : 'Verdi',
+    age : 21,
+    job: 'sviluppatore'
   },
-
   {
-    nome : 'Luigi',
-    cognome : 'Buongiorno',
-    eta : 25,
-    lavoro: 'imbianchino'
+    name : 'Luigi',
+    lastname : 'Buongiorno',
+    age : 25,
+    job: 'imbianchino'
   }
-
 ];
-
-/* 2. Per ciclare su tutti gli studenti, cioè ciclare l'array,
-devo utilizzare un ciclo for */
-for ( var i = 0 ; i < arrayStudenti.length; i++) {
-
-  // Stampo per ognuno nome e cognome
-  console.log(arrayStudenti[i].nome + ' ' + arrayStudenti[i]['cognome']);
-
+// 2. Printing name and lastname
+for ( var i = 0 ; i < studentsArray.length; i++) {
+  console.log(studentsArray[i].name + ' ' + studentsArray[i]['lastname']);
 }
-
 //--------------------------------------------------------------------------
-
-/* Dare la possibilità all’utente,
-attraverso 3 prompt, di aggiungere
-un nuovo oggetto studente inserendo nell’ordine:
-nome, cognome e età */
-
 // 1. Mi creo un oggetto vuoto
 var nuovoStudente = {
 
@@ -75,21 +53,21 @@ var nuovoStudente = {
 // 2. Prompt uno: nome
 var nomeUtente = prompt('Inserisci un nome');
 // Vado ad aggiungere il valore dato dall'utente per la chiave nome
-nuovoStudente.nome = nomeUtente;
+nuovoStudente.name = nomeUtente;
 
 // 3. Prompt due: cognome
 var cognomeUtente = prompt('Inserisci un cognome');
 // Vado ad aggiungere il valore dato dall'utente per la chiave cognome
-nuovoStudente.cognome = cognomeUtente;
+nuovoStudente.lastname = cognomeUtente;
 
 // 4. Prompt tre: eta
 var etaUtente = prompt('Inserisci eta');
 // Aggiungo il valore dato dall'utente per la chiave età
-nuovoStudente.eta = etaUtente
+nuovoStudente.age = etaUtente
 
 // 5. Stampo il nuovo oggetto
 console.log(nuovoStudente);
 
 // 6. Aggiungo l'oggetto compilato dall'utente nel mio array di oggetti
-arrayStudenti.push(nuovoStudente);
-console.log(arrayStudenti);
+studentsArray.push(nuovoStudente);
+console.log(studentsArray);
