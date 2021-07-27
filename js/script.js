@@ -52,13 +52,15 @@ var userName = prompt('Insert the name');
 while (!isNaN(userName)) {
   userName = prompt('Insert the name');
 }
+var capitalizedName = capitalizeFirstLetter(userName);
 // Add the value
-newStudent.name = userName;
+newStudent.name = capitalizedName;
 var userLastname = prompt('Insert the lastname');
 while (!isNaN(userLastname)) {
   userLastname = prompt('Insert the lastname');
 }
-newStudent.lastname = userLastname;
+var capitalizedLastname = capitalizeFirstLetter(userLastname);
+newStudent.lastname = capitalizedLastname;
 var userAge = prompt('Insert the age');
 while (isNaN(userAge) || userAge == '') {
   userAge = prompt('Insert the age');
@@ -67,3 +69,8 @@ newStudent.age = userAge
 console.log(newStudent);
 studentsArray.push(newStudent);
 console.log(studentsArray);
+//---------------------------------------------------------
+// Function - capitalizeFirstLetter
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
