@@ -1,30 +1,18 @@
-/* Creare un oggetto che descriva uno studente
-con le seguenti proprietà: nome, cognome e età.
-Stampare a schermo attraverso il for in tutte le proprietà */
-
-// 1. Creo un oggetto
-var studenteAlfa = {
-
-  nome : 'Giovanni',
-
-  cognome : 'Rossi',
-
-  eta : 33
-
+// 1. Create an object
+var student = {
+  name : 'Giovanni',
+  lastname : 'Rossi',
+  age : 33
 };
-
-// 2. Stampo il valore della chiave nome utilizzanzo la dot notation
-console.log(studenteAlfa.nome);
-// Stampo il valore della chiave cognome utilizzanzo le parentesi quadre
-console.log(studenteAlfa['cognome']);
-
-// 3. Stampare attraverso il for in tutte le proprietà
-for ( var key in studenteAlfa ) {
-
-  console.log(studenteAlfa[key]);
-
+// 2. Printing with dot notation
+console.log(student.name);
+// Printing with square brackets
+console.log(student['lastname']);
+// 3. Printing with for in all properties
+for ( var key in student ) {
+  console.log(student[key]);
 }
-
+//-------------------------------------------------
 
 /* Creare un array di oggetti di studenti.
 Ciclare su tutti gli studenti
@@ -72,7 +60,7 @@ for ( var i = 0 ; i < arrayStudenti.length; i++) {
 
 }
 
-
+//--------------------------------------------------------------------------
 
 /* Dare la possibilità all’utente,
 attraverso 3 prompt, di aggiungere
